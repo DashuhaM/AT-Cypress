@@ -7,6 +7,10 @@ export default defineConfig({
   viewportWidth: 1920,
 
   e2e: {
+    baseUrl: "https://qauto.forstudy.space/",
+     // Приховати XHR запити в логах
+  experimentalModifyObstructiveThirdPartyCode: true,
+  pageLoadTimeout: 90000,
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
