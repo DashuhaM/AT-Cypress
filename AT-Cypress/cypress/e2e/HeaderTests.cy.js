@@ -6,7 +6,6 @@ describe('HeaderTesting', () => {
     header.navigate();
   });
 
-//   it('VisitSite', () => {});
 
 
   it('Check redirection to Login Page', () => {
