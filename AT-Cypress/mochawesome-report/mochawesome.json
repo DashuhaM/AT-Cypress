@@ -1,0 +1,451 @@
+{
+  "stats": {
+    "suites": 7,
+    "tests": 13,
+    "passes": 12,
+    "pending": 0,
+    "failures": 1,
+    "start": "2026-05-22T10:43:54.510Z",
+    "end": "2026-05-22T10:44:19.626Z",
+    "duration": 25116,
+    "testsRegistered": 13,
+    "passPercent": 92.3076923076923,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "39f010fc-0abd-4c40-8b19-63eb3025ce25",
+      "title": "",
+      "fullFile": "cypress\\e2e\\RegistrationTests.cy.js",
+      "file": "cypress\\e2e\\RegistrationTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ca0b569f-0cb9-4a1e-bc88-d3f4e277b5d8",
+          "title": "Check Registration",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "caf47e69-3452-4952-a809-6b0e97c01f25",
+              "title": "Name Field Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Empty name - shows required error",
+                  "fullTitle": "Check Registration Name Field Validation Empty name - shows required error",
+                  "timedOut": null,
+                  "duration": 1877,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.SignupNameField.type(' ').clear().blur();\nregistration.ErrEmptyField.should('contain', 'Name required');",
+                  "err": {},
+                  "uuid": "77586be5-62d0-4654-9a01-53f20506a153",
+                  "parentUUID": "caf47e69-3452-4952-a809-6b0e97c01f25",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Wrong data - shows invalid error",
+                  "fullTitle": "Check Registration Name Field Validation Wrong data - shows invalid error",
+                  "timedOut": null,
+                  "duration": 1239,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.SignupNameField.type('Daria123').blur();\nregistration.ErrEmptyField.should('contain', 'Name is invalid');",
+                  "err": {},
+                  "uuid": "8eae5f05-c1d1-448c-b659-2c5e3c771f61",
+                  "parentUUID": "caf47e69-3452-4952-a809-6b0e97c01f25",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Too short name - shows length error",
+                  "fullTitle": "Check Registration Name Field Validation Too short name - shows length error",
+                  "timedOut": null,
+                  "duration": 1052,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.SignupNameField.type('R').blur();\nregistration.ErrEmptyField.should('contain', 'Name has to be from 2 to 20 characters long', 'Name is invalid');",
+                  "err": {},
+                  "uuid": "a4218d6e-678d-4a97-85ea-269dad07cb57",
+                  "parentUUID": "caf47e69-3452-4952-a809-6b0e97c01f25",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "77586be5-62d0-4654-9a01-53f20506a153",
+                "8eae5f05-c1d1-448c-b659-2c5e3c771f61",
+                "a4218d6e-678d-4a97-85ea-269dad07cb57"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 4168,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "5b3f7f50-3506-45cd-b589-30eef0a4a51f",
+              "title": "LastName Field Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Empty LastName - shows required error",
+                  "fullTitle": "Check Registration LastName Field Validation Empty LastName - shows required error",
+                  "timedOut": null,
+                  "duration": 1011,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.LastNameField.type(' ').clear().blur();\nregistration.ErrEmptyField.should('contain', 'Last name required');",
+                  "err": {},
+                  "uuid": "5aef6a82-83cd-4640-8980-0bec857a943a",
+                  "parentUUID": "5b3f7f50-3506-45cd-b589-30eef0a4a51f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Wrong LastName - shows invalid error",
+                  "fullTitle": "Check Registration LastName Field Validation Wrong LastName - shows invalid error",
+                  "timedOut": null,
+                  "duration": 1530,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.LastNameField.type('Vakula123').blur();\nregistration.ErrEmptyField.should('contain', 'Last name is invalid');",
+                  "err": {},
+                  "uuid": "049b4fb3-a377-424d-aa23-6b5ca32b9eea",
+                  "parentUUID": "5b3f7f50-3506-45cd-b589-30eef0a4a51f",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Too short LastName - shows length error",
+                  "fullTitle": "Check Registration LastName Field Validation Too short LastName - shows length error",
+                  "timedOut": null,
+                  "duration": 1416,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.LastNameField.type('V').blur();\nregistration.ErrEmptyField.should('contain', 'Last name has to be from 2 to 20 characters long');",
+                  "err": {},
+                  "uuid": "e3ad3408-a2e3-4cdb-b550-c32db40c8d7f",
+                  "parentUUID": "5b3f7f50-3506-45cd-b589-30eef0a4a51f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5aef6a82-83cd-4640-8980-0bec857a943a",
+                "049b4fb3-a377-424d-aa23-6b5ca32b9eea",
+                "e3ad3408-a2e3-4cdb-b550-c32db40c8d7f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3957,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "696ec9f0-86a0-4542-ba73-afefa1937c86",
+              "title": "Email Field Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Empty Emile - shows required error",
+                  "fullTitle": "Check Registration Email Field Validation Empty Emile - shows required error",
+                  "timedOut": null,
+                  "duration": 1489,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.signupEmailField.type(' ').clear().blur();\nregistration.ErrEmptyField.should('contain', 'Email required');",
+                  "err": {},
+                  "uuid": "5ae57bf0-2c7b-4b35-9b56-ce2f447aff5c",
+                  "parentUUID": "696ec9f0-86a0-4542-ba73-afefa1937c86",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Wrong Emile - shows invalid error",
+                  "fullTitle": "Check Registration Email Field Validation Wrong Emile - shows invalid error",
+                  "timedOut": null,
+                  "duration": 1707,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.signupEmailField.type('Daria123').blur();\nregistration.ErrEmptyField.should('contain', 'Email is incorrect');",
+                  "err": {},
+                  "uuid": "f5ca2d29-b15c-4959-a7c1-b86e5dd3b797",
+                  "parentUUID": "696ec9f0-86a0-4542-ba73-afefa1937c86",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "5ae57bf0-2c7b-4b35-9b56-ce2f447aff5c",
+                "f5ca2d29-b15c-4959-a7c1-b86e5dd3b797"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3196,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "2ecdae9e-0e4a-43ff-8f1e-f7def2eec79c",
+              "title": "Password Field Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Empty Password - shows required error",
+                  "fullTitle": "Check Registration Password Field Validation Empty Password - shows required error",
+                  "timedOut": null,
+                  "duration": 1342,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.signupPasswordField.type(' ').clear().blur();\nregistration.ErrEmptyField.should('contain', 'Password required');",
+                  "err": {},
+                  "uuid": "70208535-1c51-425c-88bb-ccb516ba91bf",
+                  "parentUUID": "2ecdae9e-0e4a-43ff-8f1e-f7def2eec79c",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Wrong Password - shows invalid error",
+                  "fullTitle": "Check Registration Password Field Validation Wrong Password - shows invalid error",
+                  "timedOut": null,
+                  "duration": 1328,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.signupPasswordField.type('Daria13').blur();\nregistration.ErrEmptyField.should('contain', 'Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter');",
+                  "err": {},
+                  "uuid": "1e230c26-8f20-4535-b89d-e8318ee03cb8",
+                  "parentUUID": "2ecdae9e-0e4a-43ff-8f1e-f7def2eec79c",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "70208535-1c51-425c-88bb-ccb516ba91bf",
+                "1e230c26-8f20-4535-b89d-e8318ee03cb8"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 2670,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "315c6ab2-8274-487e-b415-7b9fba40660e",
+              "title": "Repeate Password Field Validation",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Empty RepeatePassword - shows required error",
+                  "fullTitle": "Check Registration Repeate Password Field Validation Empty RepeatePassword - shows required error",
+                  "timedOut": null,
+                  "duration": 1405,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.signupRepeatPasswordField.type(' ').clear().blur();\nregistration.ErrEmptyField.should('contain', 'Re-enter password required');",
+                  "err": {},
+                  "uuid": "b4c6448d-1291-490d-a30c-c1f9fa3e1c75",
+                  "parentUUID": "315c6ab2-8274-487e-b415-7b9fba40660e",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "RepeatePassword does not match Password - shows invalid error",
+                  "fullTitle": "Check Registration Repeate Password Field Validation RepeatePassword does not match Password - shows invalid error",
+                  "timedOut": null,
+                  "duration": 1623,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.signupPasswordField.type('Daria@113');\nregistration.signupRepeatPasswordField.type('Daria@114').blur();\nregistration.ErrEmptyField.should('contain', 'Passwords do not match');",
+                  "err": {},
+                  "uuid": "455f9bfe-e20e-49e4-90f7-ef3e326b8d4f",
+                  "parentUUID": "315c6ab2-8274-487e-b415-7b9fba40660e",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "b4c6448d-1291-490d-a30c-c1f9fa3e1c75",
+                "455f9bfe-e20e-49e4-90f7-ef3e326b8d4f"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 3028,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "d5d18966-a8cc-4aee-9389-11a2fa673f62",
+              "title": "New User SignUp",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User with Valid data",
+                  "fullTitle": "Check Registration New User SignUp User with Valid data",
+                  "timedOut": null,
+                  "duration": 6914,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "registration.SignupNameField.type('Daria');\nregistration.LastNameField.type('Vakula');\nregistration.signupEmailField.type('tenfdfleh961@ameady.com');\nregistration.signupPasswordField.type('Daria@111');\nregistration.signupRepeatPasswordField.type('Daria@111');\nregistration.RegisterBtn.click();\nregistration.containUrlCheck('/garage');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://qauto.forstudy.space/' to include '/garage'",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://qauto.forstudy.space/' to include '/garage'\n    at _default.containUrlCheck (webpack://at-cypress/./cypress/helper/Page Objects/BasePage.js:17:17)\n    at Context.eval (webpack://at-cypress/./cypress/e2e/RegistrationTests.cy.js:104:19)",
+                    "diff": null
+                  },
+                  "uuid": "2f6b72d6-8d64-4369-8aba-076edfc27b49",
+                  "parentUUID": "d5d18966-a8cc-4aee-9389-11a2fa673f62",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "2f6b72d6-8d64-4369-8aba-076edfc27b49"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 6914,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}

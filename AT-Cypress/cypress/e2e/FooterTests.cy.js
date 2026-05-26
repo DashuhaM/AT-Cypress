@@ -24,16 +24,17 @@ describe('Footer Testing', () => {
       });
 
   it('Check redirection to LinkedIn', () => {
-    footer.instagramIcn.parent().should('have.attr', 'href').and('include', 'instagram');
-      });
-
-  it('Check redirection to ithillel Website', () => {
-    footer.ithillelWebsite.invoke('removeAttr', 'target').click();
-    footer.containUrlCheck("ithillel");
+    footer.linkedInIcn.parent().should('have.attr', 'href').and('include', 'linkedin');
       });
 
   it('Check redirection to ithillel Support', () => {
     footer.ithilleSupport.should('have.attr', 'href').and('include', 'mailto:developer@ithillel.ua');
       });
 
-})
+
+  it('Check redirection to ithillel Website', () => {
+    footer.ithillelWebsite.invoke('removeAttr', 'target').click();
+    footer.containUrlCheck("ithillel");
+      });
+
+    })
